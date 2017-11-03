@@ -48,7 +48,6 @@ namespace signalrDi
             app.UseWebSockets();
             app.UseSignalR(routes =>
             {
-                //routes.MapHub<Games.Hubs.TicTacToeHub>("tictactoe");
                 routes.MapHub<signalrDi.Hubs.ChatHub>("chat");
             });
 
