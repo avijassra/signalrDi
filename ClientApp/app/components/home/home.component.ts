@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { PubSubService } from '../../services/pubsub.service';
+import { PubSubService } from '../../services/pubsub.service';
 import { ChatMsgModel } from '../../models/chatMsg.model';
 
 @Component({
