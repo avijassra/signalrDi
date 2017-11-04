@@ -11,9 +11,9 @@ export class PubSubService {
     incomingMessage: EventEmitter<ChatMsgModel> = new EventEmitter();
     
     constructor() {
-        // debugger;
-        // this.connection = new HubConnection('/chat');
-        // this.startedConnection = this.connection.start();
+        debugger;
+        this.connection = new HubConnection('chat');
+        //this.startedConnection = this.connection.start();
 
         // // chat
         // this.connection.on('NewMessageReceived', (chatMsg: ChatMsgModel) => {

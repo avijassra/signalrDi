@@ -18,9 +18,9 @@ export class HomeComponent {
     msgs: ChatMsgModel[];
     myMsg: string;
 
-    // constructor(private pubSub: PubSubService){
-    //     this.pubSub.incomingMessage.subscribe((chatMsg: ChatMsgModel) => this.messageReceived(chatMsg))
-    // }
+    constructor(private pubSub: PubSubService){
+        this.pubSub.incomingMessage.subscribe((chatMsg: ChatMsgModel) => this.messageReceived(chatMsg))
+    }
 
     checkEnterKey(e: any) {
         if(e.keycode == 13){
