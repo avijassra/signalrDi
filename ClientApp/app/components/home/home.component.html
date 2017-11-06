@@ -8,13 +8,13 @@
         <button class="btn btn-primary pull-left" (click)="sendMsg()" (keydown)="checkEnterKey($event)" >Send</button>
     </div>
 </div>
-<hr>
+<br />
 <div>
     <div class="row msg-sec" *ngFor="let msg of msgs;" >
         <div>
             <i class="fa fa-caret-right" ></i>
-            <span>{{msg.Text}}</span>
+            <span>{{msg.text}}</span>
         </div>
-        <div>{{msg.DateTime}}</div>
+        <div>{{msg.dateTime}}</div>
     </div>
 </div>

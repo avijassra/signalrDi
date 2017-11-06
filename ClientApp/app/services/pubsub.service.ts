@@ -11,24 +11,24 @@ export class PubSubService {
     incomingMessage: EventEmitter<ChatMsgModel> = new EventEmitter();
     
     constructor() {
-        debugger;
-        this.connection = new HubConnection('/chat');
-        this.startedConnection = this.connection.start();
-
-        // // chat
-        // this.connection.on('NewMessageReceived', (chatMsg: ChatMsgModel) => {
-        //     debugger;
-        //     this.onIncomingMessage(chatMsg);
-        // });
+        if(typeof window !== 'undefined') {
+            this.connection = new HubConnection('/chat');
+            this.startedConnection = this.connection.start();
+    
+            //chat
+            this.connection.on('NewMessageReceived', (chatMsg: ChatMsgModel) => {
+                this.onIncomingMessage(chatMsg);
+            });
+        }
     }
 
     //chat
     outgoingMessage(msg: string): void{
-        // this.startedConnection
-        //     .then(() => this.connection.invoke('MessageToPublish', msg));
+        this.startedConnection
+            .then(() => this.connection.invoke('MessageToPublish', msg));
     }
 
     onIncomingMessage(chatMsg: ChatMsgModel): void {
-        //this.incomingMessage.emit(chatMsg);
+        this.incomingMessage.emit(chatMsg);
     }
 }
