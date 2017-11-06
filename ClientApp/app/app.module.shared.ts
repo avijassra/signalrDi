@@ -10,8 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 
-import { PubSubService } from './services/pubsub.service';
-
 @NgModule({
     declarations: [
         AppComponent,
@@ -33,7 +31,7 @@ import { PubSubService } from './services/pubsub.service';
         ])
     ],
     providers:[
-        PubSubService
+        
     ]
 })
 export class AppModuleShared {
