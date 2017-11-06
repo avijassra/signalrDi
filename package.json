@@ -17,6 +17,7 @@
     "@angular/platform-browser-dynamic": "5.0.0",
     "@angular/platform-server": "5.0.0",
     "@angular/router": "5.0.0",
+    "@aspnet/signalr-client": "~1.0.0-alpha2-final",
     "@ngtools/webpack": "1.5.0",
     "@types/webpack-env": "1.13.0",
     "angular2-template-loader": "0.6.2",
@@ -46,8 +47,9 @@
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.2",
     "webpack-merge": "4.1.0",
-    "zone.js": "0.8.12",
-    "@aspnet/signalr-client": "~1.0.0-alpha2-final"
+    "websocket": "^1.0.25",
+    "xmlhttprequest": "^1.8.0",
+    "zone.js": "0.8.12"
   },
   "devDependencies": {
     "@types/chai": "4.0.1",
