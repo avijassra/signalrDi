@@ -24,6 +24,10 @@ namespace signalrDi
         {
             services.AddMvc();
             services.AddSignalR();
+            // services.AddNodeServices(new NodeServicesOptions {
+            //     LaunchWithDebugging = true
+            // });
+            services.AddNodeServices();
 
             services.AddSingleton<signalrDi.Models.AppCache>();
         }
