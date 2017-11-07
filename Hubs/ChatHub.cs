@@ -8,10 +8,15 @@ namespace signalrDi.Hubs
 
     public class ChatHub : Hub
     {
-        //AppCache _cache;
-        // public ChatHub(AppCache cache) {
-        //     this._cache = cache;
-        // }
+        AppCache _cache;
+        public ChatHub(AppCache cache) {
+            this._cache = cache;
+        }
+
+        public override Task OnConnectedAsync() {
+            this._cache.Ids.Add(this.Context.ConnectionId);
+            return null;
+        }
 
         public Task MessageToPublish(string message)
         {

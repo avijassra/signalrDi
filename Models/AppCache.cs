@@ -1,10 +1,13 @@
 namespace signalrDi.Models 
 {
-    using System;
     using System.Collections.Generic;
     
     public class AppCache 
     {
-        public List<Guid> Ids { get; set; }
+        public AppCache() {
+            this.Ids = new List<string>();
+        }
+
+        public List<string> Ids { get; set; }
     }
 }
