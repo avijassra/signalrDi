@@ -15,7 +15,7 @@ namespace signalrDi.Hubs
 
         public override Task OnConnectedAsync() {
             this._cache.Ids.Add(this.Context.ConnectionId);
-            return null;
+            return base.OnConnectedAsync();
         }
 
         public Task MessageToPublish(string message)

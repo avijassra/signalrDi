@@ -2,8 +2,11 @@
     ViewData["Title"] = "Home Page";
 }
 
-<!-- <app asp-prerender-module="ClientApp/dist/main-server">Loading...</app> -->
-<app>Loading...</app>
+<!-- <Cache expires-after="@TimeSpan.FromMinutes(60)">
+    <app asp-prerender-module="ClientApp/dist/main-server">Loading...</app> -->
+    <app>Loading...</app>
+<!-- </Cache> -->
+
 
 <script src="~/dist/vendor.js" asp-append-version="true"></script>
 @section scripts {

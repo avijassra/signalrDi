@@ -24,6 +24,7 @@ export class PubSubService {
 
     //chat
     outgoingMessage(msg: string): void{
+        debugger;
         this.startedConnection
             .then(() => this.connection.invoke('MessageToPublish', msg));
     }
